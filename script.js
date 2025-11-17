@@ -25,6 +25,19 @@ function showToast(message) {
 }
 
 /* =====================================================
+   CONTACT FORM — SIMPLE "MESSAGE SENT"
+===================================================== */
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        showToast("Message Sent!");
+        contactForm.reset();
+    });
+}
+
+/* =====================================================
    SMOOTH SCROLL
 ===================================================== */
 document.querySelectorAll("a[href^='#']").forEach(link => {
