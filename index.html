@@ -28,11 +28,9 @@
             <a href="https://facebook.com/siwelyour" target="_blank">
                 <img src="image/facebook.svg" alt="Facebook">
             </a>
-
             <a href="https://t.me/Leo77732" target="_blank">
                 <img src="image/telegram.svg" alt="Telegram">
             </a>
-
             <div class="discord-copy" onclick="copyDiscord()">
                 <img src="image/discord.svg" alt="Discord">
             </div>
@@ -105,7 +103,6 @@
         <h2>რატომ მე?</h2>
 
         <div class="why-boxes">
-
             <div class="why-item">
                 <div class="why-icon">⚡</div>
                 <h3>სწრაფი და ხარისხიანი მუშაობა</h3>
@@ -129,7 +126,6 @@
                 <h3>უსაფრთხო & სუფთა კოდი</h3>
                 <p>სტაბილურობა და მაღალი ხარისხის კოდი გარანტირებულია.</p>
             </div>
-
         </div>
     </section>
 
@@ -143,7 +139,8 @@
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
 
-        <form id="contactForm" action="https://formspree.io/f/xblqbzqj" method="POST">
+        <!-- IMPORTANT: Removed action so JS handles submit -->
+        <form id="contactForm">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Email Address" required>
             <textarea name="message" placeholder="Your Message" required></textarea>
@@ -180,21 +177,6 @@
 
     <!-- JAVASCRIPT -->
     <script src="script.js"></script>
-
-    <!-- 🔵 TAWK.TO LIVE CHAT ADDED HERE -->
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/691ae7f686b8741960b88643/1ja8hk706';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!--End of Tawk.to Script-->
 
 </body>
 </html>
