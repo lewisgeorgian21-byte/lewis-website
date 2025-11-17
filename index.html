@@ -6,15 +6,10 @@
 
     <title>LW Developer — Web Developer</title>
 
-    <!-- SEO META -->
     <meta name="description" content="Professional Web Developer — ვქმნი თანამედროვე, სწრაფ და ბიზნესზე მორგებულ ვებსაიტებს.">
 
-    <!-- GOOGLE FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Fira+GO:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
 
@@ -160,7 +155,7 @@
         © 2025 LW Developer — All rights reserved.
     </footer>
 
-    <!-- TOAST MESSAGE (small popup) -->
+    <!-- TOAST STYLE -->
     <style>
         .toast {
             position: fixed;
@@ -185,6 +180,8 @@
 
     <!-- JAVASCRIPT -->
     <script>
+
+        /* SHOW POPUP */
         function showToast(message) {
             const toast = document.createElement("div");
             toast.className = "toast";
@@ -198,11 +195,13 @@
             }, 2200);
         }
 
+        /* COPY DISCORD */
         function copyDiscord() {
             navigator.clipboard.writeText("lewis901");
             showToast("Discord copied: lewis901");
         }
 
+        /* CONTACT FORM SUBMIT */
         document.getElementById("contactForm").addEventListener("submit", async function(e) {
             e.preventDefault();
 
@@ -237,6 +236,7 @@
         }
 
         setInterval(createCTAParticle, 130);
+
     </script>
 
 </body>
