@@ -179,65 +179,22 @@
     </style>
 
     <!-- JAVASCRIPT -->
-    <script>
+    <script src="script.js"></script>
 
-        /* SHOW POPUP */
-        function showToast(message) {
-            const toast = document.createElement("div");
-            toast.className = "toast";
-            toast.innerText = message;
-            document.body.appendChild(toast);
-
-            setTimeout(() => toast.classList.add("show"), 50);
-            setTimeout(() => {
-                toast.classList.remove("show");
-                setTimeout(() => toast.remove(), 300);
-            }, 2200);
-        }
-
-        /* COPY DISCORD */
-        function copyDiscord() {
-            navigator.clipboard.writeText("lewis901");
-            showToast("Discord copied: lewis901");
-        }
-
-        /* CONTACT FORM SUBMIT */
-        document.getElementById("contactForm").addEventListener("submit", async function(e) {
-            e.preventDefault();
-
-            const form = e.target;
-            const data = new FormData(form);
-
-            let send = await fetch(form.action, {
-                method: "POST",
-                body: data,
-                headers: { "Accept": "application/json" }
-            });
-
-            if (send.ok) {
-                showToast("Message Sent!");
-                form.reset();
-            } else {
-                showToast("Error! Try Again.");
-            }
-        });
-
-        /* CTA PARTICLES */
-        const ctaParticles = document.getElementById("ctaParticles");
-
-        function createCTAParticle() {
-            const p = document.createElement("span");
-            p.className = "cta-particle";
-            p.style.left = Math.random() * 100 + "%";
-            p.style.animationDuration = (Math.random() * 3 + 2) + "s";
-
-            ctaParticles.appendChild(p);
-            setTimeout(() => p.remove(), 5000);
-        }
-
-        setInterval(createCTAParticle, 130);
-
+    <!-- 🔵 TAWK.TO LIVE CHAT ADDED HERE -->
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/691ae7f686b8741960b88643/1ja8hk706';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
     </script>
+    <!--End of Tawk.to Script-->
 
 </body>
 </html>
