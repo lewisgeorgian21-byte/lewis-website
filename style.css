@@ -76,7 +76,7 @@ nav a:hover {
     filter: invert(1);
 }
 
-social-icons img:hover {
+.social-icons img:hover {
     transform: scale(1.15);
     opacity: 1;
 }
@@ -351,9 +351,7 @@ footer {
     margin-top: 50px;
 }
 
-/* ---------------------------------
-   TOAST (CENTERED)
----------------------------------- */
+/* TOAST FIX — bottom center */
 .toast {
     position: fixed;
     bottom: 40px;
@@ -374,9 +372,7 @@ footer {
     transform: translateX(-50%) translateY(0);
 }
 
-/* ---------------------------------
-   RESPONSIVE
----------------------------------- */
+/* RESPONSIVE */
 
 /* 1024px */
 @media (max-width: 1024px) {
@@ -387,30 +383,12 @@ footer {
 
 /* 768px */
 @media (max-width: 768px) {
-
-    header {
-        padding: 18px 25px;
-    }
-
-    nav {
-        display: none;
-    }
-
-    .hero {
-        padding: 140px 25px 50px;
-    }
-
-    .hero-img img {
-        width: 290px;
-    }
-
-    .service-boxes {
-        grid-template-columns: 1fr;
-    }
-
-    .contact form {
-        width: 100%;
-    }
+    header { padding: 18px 25px; }
+    nav { display: none; }
+    .hero { padding: 140px 25px 50px; }
+    .hero-img img { width: 290px; }
+    .service-boxes { grid-template-columns: 1fr; }
+    .contact form { width: 100%; }
 }
 
 /* 600px */
@@ -423,11 +401,7 @@ footer {
     .hero-text h1 { font-size: 34px; }
     .hero-text p { font-size: 16px; }
     .hero-img img { width: 230px; }
-
-    .cta-section {
-        padding: 120px 25px;
-    }
-
+    .cta-section { padding: 120px 25px; }
     .cta-section h2 { font-size: 34px; }
     .cta-section p { font-size: 16px; }
     .cta-btn { font-size: 18px; padding: 14px 28px; }
