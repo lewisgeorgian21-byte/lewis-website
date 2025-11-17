@@ -23,7 +23,7 @@ header {
     background: rgba(0, 0, 0, 0.65);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255,255,255,0.05);
-    z-index: 100;
+    z-index: 1000;
 }
 
 .logo {
@@ -33,8 +33,13 @@ header {
 }
 
 /* NAVIGATION */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
 nav a {
-    margin-left: 28px;
     text-decoration: none;
     color: #ffffff;
     font-weight: 500;
@@ -45,7 +50,7 @@ nav a:hover {
     color: #2d80ff;
 }
 
-/* Hire Button */
+/* HIRE BUTTON */
 .hire {
     padding: 8px 16px;
     background: #2d80ff;
@@ -53,10 +58,7 @@ nav a:hover {
     border-radius: 6px;
     transition: 0.3s ease;
 }
-
-.hire:hover {
-    background: #1a5fd6;
-}
+.hire:hover { background: #1a5fd6; }
 
 /* SOCIAL ICONS */
 .social-icons {
@@ -99,9 +101,7 @@ nav a:hover {
     opacity: 0.85;
 }
 
-.buttons {
-    margin-top: 28px;
-}
+.buttons { margin-top: 28px; }
 
 .btn-primary,
 .btn-secondary {
@@ -125,7 +125,7 @@ nav a:hover {
 }
 .btn-secondary:hover { background: #444; }
 
-/* HERO IMAGE — SMOOTH NEON */
+/* HERO IMAGE */
 .hero-img img {
     width: 360px;
     border-radius: 18px;
@@ -178,7 +178,6 @@ nav a:hover {
     text-decoration: none !important;
     transition: 0.3s ease;
 }
-
 .cta-btn:hover {
     transform: translateY(-4px);
     box-shadow: 0 0 34px rgba(45,128,255,0.65);
@@ -235,7 +234,6 @@ nav a:hover {
     transition: 0.35s ease;
     text-align: center;
 }
-
 .box:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 35px rgba(0,0,0,0.14);
@@ -246,10 +244,7 @@ nav a:hover {
     margin-bottom: 20px;
     transition: 0.3s ease;
 }
-
-.box:hover .service-icon {
-    transform: scale(1.1) rotate(4deg);
-}
+.box:hover .service-icon { transform: scale(1.1) rotate(4deg); }
 
 /* WHY ME */
 .why-me {
@@ -279,16 +274,12 @@ nav a:hover {
     backdrop-filter: blur(8px);
     transition: 0.35s ease;
 }
-
 .why-item:hover {
     transform: translateY(-6px);
     box-shadow: 0 0 25px rgba(0, 140, 255, 0.35);
 }
 
-.why-icon {
-    font-size: 42px;
-    margin-bottom: 15px;
-}
+.why-icon { font-size: 42px; margin-bottom: 15px; }
 
 .why-item h3 {
     font-size: 20px;
@@ -349,9 +340,7 @@ button {
     transition: 0.3s ease;
     cursor: pointer;
 }
-button:hover {
-    background: #1a5fd6;
-}
+button:hover { background: #1a5fd6; }
 
 /* FOOTER */
 footer {
@@ -362,25 +351,62 @@ footer {
     margin-top: 50px;
 }
 
-/* RESPONSIVE */
+/* ---------------------------------
+   RESPONSIVE
+---------------------------------- */
+
+/* 1024px */
 @media (max-width: 1024px) {
     .service-boxes { grid-template-columns: repeat(2, 1fr); }
-    .hero { flex-direction: column; text-align: center; }
+    .hero { flex-direction: column; text-align: center; gap: 40px; }
     .why-boxes { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* 768px */
 @media (max-width: 768px) {
-    header { padding: 18px 30px; }
-    nav { display: none; }
-    .service-boxes { grid-template-columns: 1fr; }
+
+    header {
+        padding: 18px 25px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    /* HERO */
+    .hero {
+        padding: 140px 25px 50px;
+    }
+
+    .hero-img img {
+        width: 290px;
+    }
+
+    .service-boxes {
+        grid-template-columns: 1fr;
+    }
+
+    .contact form {
+        width: 100%;
+    }
 }
 
+/* 600px */
 @media (max-width: 600px) {
     .why-boxes { grid-template-columns: 1fr; }
 }
 
+/* 480px */
 @media (max-width: 480px) {
     .hero-text h1 { font-size: 34px; }
     .hero-text p { font-size: 16px; }
-    .hero-img img { width: 250px; }
+    .hero-img img { width: 230px; }
+
+    .cta-section {
+        padding: 120px 25px;
+    }
+
+    .cta-section h2 { font-size: 34px; }
+    .cta-section p { font-size: 16px; }
+    .cta-btn { font-size: 18px; padding: 14px 28px; }
 }
