@@ -174,10 +174,15 @@
         <h2>Contact Me</h2>
 
 <form action="https://api.web3forms.com/submit" method="POST">
+
+    <!-- REQUIRED: ACCESS KEY -->
     <input type="hidden" name="access_key" value="5c9b5c8b-6a2e-4706-b745-16f5a48aceb5">
 
+    <!-- OPTIONAL BUT RECOMMENDED: REDIRECT AFTER SUBMIT -->
+    <input type="hidden" name="redirect" value="https://lewisgeorgian21-byte.github.io/lewis-website/success.html">
+
     <input type="text" name="name" placeholder="Your Name" required>
-    
+
     <input type="email" name="email" placeholder="Email Address" required>
 
     <textarea name="message" placeholder="Your Message" required></textarea>
@@ -232,5 +237,6 @@
 
 </body>
 </html>
+
 
 
