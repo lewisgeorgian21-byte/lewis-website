@@ -76,7 +76,7 @@ nav a:hover {
     filter: invert(1);
 }
 
-.social-icons img:hover {
+social-icons img:hover {
     transform: scale(1.15);
     opacity: 1;
 }
@@ -352,6 +352,29 @@ footer {
 }
 
 /* ---------------------------------
+   TOAST (CENTERED)
+---------------------------------- */
+.toast {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: rgba(40,40,40,0.95);
+    padding: 14px 22px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 16px;
+    opacity: 0;
+    transition: 0.35s ease;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    z-index: 999999;
+}
+.toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* ---------------------------------
    RESPONSIVE
 ---------------------------------- */
 
@@ -373,7 +396,6 @@ footer {
         display: none;
     }
 
-    /* HERO */
     .hero {
         padding: 140px 25px 50px;
     }
