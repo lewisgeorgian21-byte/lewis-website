@@ -7,7 +7,7 @@ function copyDiscord() {
 }
 
 /* =====================================================
-   CUSTOM TOAST POPUP (USED IN HTML)
+   CUSTOM TOAST POPUP
 ===================================================== */
 function showToast(message) {
     const toast = document.createElement("div");
@@ -42,7 +42,7 @@ document.querySelectorAll("a[href^='#']").forEach(link => {
 });
 
 /* =====================================================
-   HERO IMAGE FADE-IN ANIMATION
+   HERO IMAGE FADE-IN
 ===================================================== */
 window.addEventListener("load", () => {
     const heroImg = document.querySelector(".hero-img img");
@@ -59,7 +59,7 @@ window.addEventListener("load", () => {
 });
 
 /* =====================================================
-   CTA SECTION PARTICLES
+   CTA PARTICLES
 ===================================================== */
 const ctaParticles = document.getElementById("ctaParticles");
 
@@ -76,3 +76,96 @@ if (ctaParticles) {
 
     setInterval(createCTAParticle, 130);
 }
+
+/* =====================================================
+   SCROLL REVEAL ANIMATION (NO CSS NEEDED)
+===================================================== */
+const revealElements = document.querySelectorAll(".box, .why-item, .service-boxes, .hero-text, .about, .contact");
+
+function revealOnScroll() {
+    const trigger = window.innerHeight * 0.85;
+
+    revealElements.forEach(el => {
+        const rect = el.getBoundingClientRect().top;
+        if (rect < trigger) el.classList.add("reveal");
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+
+/* Auto-apply basic reveal animation using JS */
+document.head.insertAdjacentHTML("beforeend", `
+<style>
+.reveal {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: 0.9s ease;
+}
+.box, .why-item, .service-boxes, .hero-text, .about, .contact {
+    opacity: 0;
+    transform: translateY(40px);
+}
+</style>
+`);
+
+/* =====================================================
+   BUTTON RIPPLE EFFECT (NO CSS REQUIRED)
+===================================================== */
+document.querySelectorAll("button, .btn-primary, .btn-secondary, .cta-btn").forEach(btn => {
+    btn.addEventListener("click", function(e) {
+        const ripple = document.createElement("span");
+        ripple.className = "ripple";
+
+        const size = Math.max(btn.offsetWidth, btn.offsetHeight);
+        ripple.style.width = ripple.style.height = size + "px";
+
+        const rect = btn.getBoundingClientRect();
+        ripple.style.left = e.clientX - rect.left - size / 2 + "px";
+        ripple.style.top = e.clientY - rect.top - size / 2 + "px";
+
+        btn.appendChild(ripple);
+
+        setTimeout(() => ripple.remove(), 600);
+    });
+});
+
+/* Ripple CSS (auto injected) */
+document.head.insertAdjacentHTML("beforeend", `
+<style>
+.ripple {
+    position: absolute;
+    background: rgba(255,255,255,0.35);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: rippleEffect 0.6s ease-out forwards;
+    pointer-events: none;
+}
+@keyframes rippleEffect {
+    to { transform: scale(3); opacity: 0; }
+}
+.btn-primary, .btn-secondary, .cta-btn, button {
+    position: relative;
+    overflow: hidden;
+}
+</style>
+`);
+
+/* =====================================================
+   SMOOTH SCROLL PROGRESS BAR (AUTO ADDED)
+===================================================== */
+const progressBar = document.createElement("div");
+progressBar.style.position = "fixed";
+progressBar.style.top = 0;
+progressBar.style.left = 0;
+progressBar.style.height = "4px";
+progressBar.style.background = "#2d80ff";
+progressBar.style.width = "0%";
+progressBar.style.zIndex = "9999999";
+document.body.appendChild(progressBar);
+
+window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const height = document.body.scrollHeight - window.innerHeight;
+    progressBar.style.width = (scrollTop / height) * 100 + "%";
+});
