@@ -3,56 +3,25 @@
 ===================================================== */
 function copyDiscord() {
     navigator.clipboard.writeText("lewis901");
-    showPopup("Discord username copied!");
+    showToast("Discord copied: lewis901");
 }
 
 /* =====================================================
-   CONTACT FORM SUBMIT (TOAST POPUP)
+   CUSTOM TOAST POPUP (USED IN HTML)
 ===================================================== */
-const contactForm = document.getElementById("contactForm");
+function showToast(message) {
+    const toast = document.createElement("div");
+    toast.className = "toast";
+    toast.innerText = message;
 
-if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-        e.preventDefault();
+    document.body.appendChild(toast);
 
-        setTimeout(() => {
-            showPopup("Your message has been sent!");
-            contactForm.reset();
-        }, 200);
-    });
-}
+    setTimeout(() => toast.classList.add("show"), 50);
 
-/* =====================================================
-   CUSTOM POPUP FUNCTION
-===================================================== */
-function showPopup(message) {
-    const popup = document.createElement("div");
-    popup.className = "popup-message";
-    popup.innerText = message;
-
-    document.body.appendChild(popup);
-
-    // Fade-in
-    setTimeout(() => popup.classList.add("show"), 20);
-
-    // Fade-out
     setTimeout(() => {
-        popup.classList.remove("show");
-        setTimeout(() => popup.remove(), 300);
-    }, 1800);
-}
-
-/* =====================================================
-   MOBILE BURGER MENU
-===================================================== */
-const burger = document.querySelector(".burger");
-const mobileMenu = document.querySelector(".mobile-menu");
-
-if (burger && mobileMenu) {
-    burger.addEventListener("click", () => {
-        burger.classList.toggle("active");
-        mobileMenu.classList.toggle("active");
-    });
+        toast.classList.remove("show");
+        setTimeout(() => toast.remove(), 300);
+    }, 2200);
 }
 
 /* =====================================================
@@ -90,41 +59,20 @@ window.addEventListener("load", () => {
 });
 
 /* =====================================================
-   HOME SECTION PARTICLES
-===================================================== */
-const particlesContainer = document.getElementById("particles");
-
-if (particlesContainer) {
-    function createParticle() {
-        const p = document.createElement("span");
-        p.className = "particle";
-        p.style.left = Math.random() * 100 + "%";
-        p.style.animationDuration = (Math.random() * 3 + 3) + "s";
-
-        particlesContainer.appendChild(p);
-
-        setTimeout(() => p.remove(), 6000);
-    }
-
-    setInterval(createParticle, 150);
-}
-
-/* =====================================================
    CTA SECTION PARTICLES
 ===================================================== */
-const ctaParticlesBox = document.getElementById("ctaParticles");
+const ctaParticles = document.getElementById("ctaParticles");
 
-if (ctaParticlesBox) {
+if (ctaParticles) {
     function createCTAParticle() {
         const p = document.createElement("span");
         p.className = "cta-particle";
         p.style.left = Math.random() * 100 + "%";
-        p.style.animationDuration = (Math.random() * 3 + 3) + "s";
+        p.style.animationDuration = (Math.random() * 3 + 2) + "s";
 
-        ctaParticlesBox.appendChild(p);
-
-        setTimeout(() => p.remove(), 6500);
+        ctaParticles.appendChild(p);
+        setTimeout(() => p.remove(), 5000);
     }
 
-    setInterval(createCTAParticle, 180);
+    setInterval(createCTAParticle, 130);
 }
