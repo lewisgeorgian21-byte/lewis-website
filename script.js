@@ -25,6 +25,34 @@ function showToast(message) {
 }
 
 /* =====================================================
+   CONTACT FORM — AJAX (Formspree)
+===================================================== */
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
+
+    if (!form) return;
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        let send = await fetch("https://formspree.io/f/xblqbzqj", {
+            method: "POST",
+            body: formData,
+            headers: { "Accept": "application/json" }
+        });
+
+        if (send.ok) {
+            showToast("Message Sent!");
+            form.reset();
+        } else {
+            showToast("Error! Try Again.");
+        }
+    });
+});
+
+/* =====================================================
    SMOOTH SCROLL NAVIGATION
 ===================================================== */
 document.querySelectorAll("a[href^='#']").forEach(link => {
@@ -49,7 +77,7 @@ window.addEventListener("load", () => {
     if (!heroImg) return;
 
     heroImg.style.opacity = "0";
-    heroImg.style.transform = "translateY(25px)";
+    heroImg.style.transform = "translateY(30px)";
 
     setTimeout(() => {
         heroImg.style.transition = "0.85s ease";
@@ -59,7 +87,7 @@ window.addEventListener("load", () => {
 });
 
 /* =====================================================
-   CTA PARTICLES
+   CTA SECTION PARTICLES
 ===================================================== */
 const ctaParticles = document.getElementById("ctaParticles");
 
@@ -78,9 +106,11 @@ if (ctaParticles) {
 }
 
 /* =====================================================
-   SCROLL REVEAL ANIMATION (NO CSS NEEDED)
+   SCROLL REVEAL ANIMATION
 ===================================================== */
-const revealElements = document.querySelectorAll(".box, .why-item, .service-boxes, .hero-text, .about, .contact");
+const revealElements = document.querySelectorAll(
+    ".box, .why-item, .hero-text, .services, .about, .contact"
+);
 
 function revealOnScroll() {
     const trigger = window.innerHeight * 0.85;
@@ -94,7 +124,7 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 
-/* Auto-apply basic reveal animation using JS */
+/* Reveal CSS Auto Inject */
 document.head.insertAdjacentHTML("beforeend", `
 <style>
 .reveal {
@@ -102,7 +132,7 @@ document.head.insertAdjacentHTML("beforeend", `
     transform: translateY(0) !important;
     transition: 0.9s ease;
 }
-.box, .why-item, .service-boxes, .hero-text, .about, .contact {
+.box, .why-item, .hero-text, .services, .about, .contact {
     opacity: 0;
     transform: translateY(40px);
 }
@@ -110,7 +140,7 @@ document.head.insertAdjacentHTML("beforeend", `
 `);
 
 /* =====================================================
-   BUTTON RIPPLE EFFECT (NO CSS REQUIRED)
+   BUTTON RIPPLE EFFECT
 ===================================================== */
 document.querySelectorAll("button, .btn-primary, .btn-secondary, .cta-btn").forEach(btn => {
     btn.addEventListener("click", function(e) {
@@ -125,12 +155,11 @@ document.querySelectorAll("button, .btn-primary, .btn-secondary, .cta-btn").forE
         ripple.style.top = e.clientY - rect.top - size / 2 + "px";
 
         btn.appendChild(ripple);
-
         setTimeout(() => ripple.remove(), 600);
     });
 });
 
-/* Ripple CSS (auto injected) */
+/* Ripple CSS Auto */
 document.head.insertAdjacentHTML("beforeend", `
 <style>
 .ripple {
@@ -144,7 +173,7 @@ document.head.insertAdjacentHTML("beforeend", `
 @keyframes rippleEffect {
     to { transform: scale(3); opacity: 0; }
 }
-.btn-primary, .btn-secondary, .cta-btn, button {
+button, .btn-primary, .btn-secondary, .cta-btn {
     position: relative;
     overflow: hidden;
 }
@@ -152,7 +181,7 @@ document.head.insertAdjacentHTML("beforeend", `
 `);
 
 /* =====================================================
-   SMOOTH SCROLL PROGRESS BAR (AUTO ADDED)
+   SMOOTH SCROLL PROGRESS BAR
 ===================================================== */
 const progressBar = document.createElement("div");
 progressBar.style.position = "fixed";
