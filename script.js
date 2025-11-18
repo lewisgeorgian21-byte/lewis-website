@@ -24,14 +24,23 @@ function showToast(message) {
     }, 2200);
 }
 
-/* =====================================================
-   CONTACT FORM — SIMPLE "MESSAGE SENT"
-===================================================== */
+/* CONTACT FORM + AJAX (NO REDIRECT) */
 const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
-    contactForm.addEventListener("submit", function(e) {
+    contactForm.addEventListener("submit", async function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(contactForm);
+
+        await fetch("https://formspree.io/f/xeonqdpk", {
+            method: "POST",
+            body: formData,
+            headers: { "Accept": "application/json" }
+        });
+
         showToast("Message Sent!");
+        contactForm.reset();
     });
 }
 
@@ -88,4 +97,5 @@ if (ctaParticles) {
 
     setInterval(createCTAParticle, 130);
 }
+
 
