@@ -357,12 +357,16 @@ footer {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%) translateY(30px) scale(0.8);
-  background: linear-gradient(135deg, #16a34a, #4ade80);
+
+  /* FORCE GREEN (არანაირი თეთრი აღარაა სასწაულად) */
+  background: linear-gradient(135deg, #16a34a, #4ade80) !important;
+  color: #ffffff !important;
+
   padding: 12px 22px;
-  color: white;
   border-radius: 10px;
   font-size: 15px;
   font-weight: 600;
+
   opacity: 0;
   transition: opacity .4s ease, transform .4s cubic-bezier(.25,.8,.25,1);
   box-shadow: 0 4px 18px rgba(0,0,0,0.35);
@@ -371,9 +375,10 @@ footer {
 
 /* Visible State */
 .toast.show {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0) scale(1);
+  opacity: 1 !important;
+  transform: translateX(-50%) translateY(0) scale(1) !important;
 }
+
 
 
 /* RESPONSIVE */
@@ -410,5 +415,6 @@ footer {
     .cta-section p { font-size: 16px; }
     .cta-btn { font-size: 18px; padding: 14px 28px; }
 }
+
 
 
