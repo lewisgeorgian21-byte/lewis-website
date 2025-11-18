@@ -353,23 +353,22 @@ footer {
 
 /* TOAST FIX — bottom center */
 .toast {
-    position: fixed;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%) translateY(20px);
-    background: rgba(40,40,40,0.95);
-    padding: 14px 22px;
-    border-radius: 12px;
-    color: #fff;
-    font-size: 16px;
-    opacity: 0;
-    transition: 0.35s ease;
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
-    z-index: 999999;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: linear-gradient(135deg, #16a34a, #4ade80);
+  padding: 12px 18px;
+  color: white;
+  border-radius: 8px;
+  font-size: 15px;
+  opacity: 0;
+  transition: opacity .35s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
 }
+
 .toast.show {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
+  opacity: 1;
 }
 
 /* RESPONSIVE */
@@ -406,3 +405,4 @@ footer {
     .cta-section p { font-size: 16px; }
     .cta-btn { font-size: 18px; padding: 14px 28px; }
 }
+
