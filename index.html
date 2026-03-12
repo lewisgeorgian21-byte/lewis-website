@@ -1,239 +1,259 @@
 <!DOCTYPE html>
 <html lang="ka">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ⭐ SEO TITLE -->
-    <title>ვებ საიტების დამზადება | ვებსაიტების შექმნა | LW Developer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ⭐ SEO DESCRIPTION -->
-    <meta name="description" content="ვებ საიტების დამზადება, ვებსაიტების შექმნა, ლენდინგები, ონლაინ მაღაზიები და ინდივიდუალური ვებგვერდები. თანამედროვე, სწრაფი და პროფესიონალური ვებსაიტები — LW Developer.">
+<title>ვებ საიტების დამზადება | ვებსაიტების შექმნა | LW Developer</title>
 
-    <!-- ⭐ SEO KEYWORDS -->
-    <meta name="keywords" content="ვებ საიტების დამზადება, ვებსაიტების შექმნა, საიტის გაკეთება, ლენდინგის დამზადება, ონლაინ მაღაზია, web developer, Georgian web developer, website creation">
+<meta name="description" content="ვებ საიტების დამზადება, ვებსაიტების შექმნა, ლენდინგები, ონლაინ მაღაზიები და ინდივიდუალური ვებგვერდები. თანამედროვე, სწრაფი და პროფესიონალური ვებსაიტები — LW Developer.">
 
-    <meta name="author" content="LW Developer">
+<meta name="keywords" content="ვებ საიტების დამზადება, ვებსაიტების შექმნა, საიტის გაკეთება, ლენდინგის დამზადება, ონლაინ მაღაზია, web developer, Georgian web developer, website creation">
 
-    <!-- ⭐ Open Graph (Social Media SEO) -->
-    <meta property="og:title" content="ვებ საიტების დამზადება | LW Developer">
-    <meta property="og:description" content="ვებსაიტების შექმნა, ლენდინგები და ონლაინ მაღაზიები — პროფესიონალურად.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://lewisgeorgian21-byte.github.io/lewis-website/">
-    <meta property="og:image" content="https://lewisgeorgian21-byte.github.io/lewis-website/image/profile.png">
+<meta name="author" content="LW Developer">
 
-    <!-- ⭐ Schema JSON-LD (Google Ranking Booster) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "WebSite",
-      "name": "LW Developer",
-      "url": "https://lewisgeorgian21-byte.github.io/lewis-website/",
-      "description": "ვებ საიტების დამზადება და ვებსაიტების შექმნა — პროფესიონალური ვებდეველოპერი.",
-      "sameAs": [
-        "https://www.facebook.com/lwwebdeveloper",
-        "https://t.me/Leo77732"
-      ]
-    }
-    </script>
+<meta property="og:title" content="ვებ საიტების დამზადება | LW Developer">
+<meta property="og:description" content="ვებსაიტების შექმნა, ლენდინგები და ონლაინ მაღაზიები — პროფესიონალურად.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lewisgeorgian21-byte.github.io/lewis-website/">
+<meta property="og:image" content="https://lewisgeorgian21-byte.github.io/lewis-website/image/profile.png">
 
-    <!-- Fonts & CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Fira+GO:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+"@context":"https://schema.org/",
+"@type":"WebSite",
+"name":"LW Developer",
+"url":"https://lewisgeorgian21-byte.github.io/lewis-website/",
+"description":"ვებ საიტების დამზადება და ვებსაიტების შექმნა — პროფესიონალური ვებდეველოპერი.",
+"sameAs":[
+"https://www.facebook.com/lwwebdeveloper",
+"https://t.me/Leo77732"
+]
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Fira+GO:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
 </head>
+
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="logo">LW Developer</div>
+<!-- PARTICLES -->
+<div id="particles-js"></div>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#contact" class="hire">Hire Me</a>
-        </nav>
+<!-- START SCREEN -->
+<div id="startScreen">
+<button id="startBtn" onclick="openSite()">დააკლიკე</button>
+</div>
 
-        <div class="social-icons">
-            <a href="https://www.facebook.com/lwwebdeveloper" target="_blank">
-                <img src="image/facebook.svg" alt="Facebook">
-            </a>
+<!-- MAIN SITE -->
+<div id="mainSite">
 
-            <a href="https://t.me/Leo77732" target="_blank">
-                <img src="image/telegram.svg" alt="Telegram">
-            </a>
+<header>
 
-            <div class="discord-copy" onclick="copyDiscord()">
-                <img src="image/discord.svg" alt="Discord">
-            </div>
-        </div>
-    </header>
+<div class="logo">LW Developer</div>
 
-    <!-- HERO -->
-    <section id="home" class="hero">
-        <div class="hero-text">
-            <h1>Professional Web Developer</h1>
-            <p>I build modern, fast and business-focused websites.</p>
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact" class="hire">Hire Me</a>
+</nav>
 
-            <div class="buttons">
-                <a href="#contact" class="btn-primary">Hire Me</a>
-                <a href="#services" class="btn-secondary">My Services</a>
-            </div>
-        </div>
+<div class="social-icons">
 
-        <div class="hero-img">
-            <img src="image/profile.png" alt="profile photo">
-        </div>
-    </section>
+<a href="https://www.facebook.com/lwwebdeveloper" target="_blank">
+<img src="image/facebook.svg" alt="Facebook">
+</a>
 
-    <!-- CTA SECTION -->
-    <section class="cta-section">
-        <div class="cta-inner">
-            <h2>გინდა თანამედროვე და ეფექტური ვებსაიტი?</h2>
-            <p>დავიწყოთ შენი პროექტის შექმნა — მე დაგეხმარები საუკეთესო შედეგის მიღებაში.</p>
-            <a href="#contact" class="cta-btn">დამიკავშირდი</a>
-        </div>
+<a href="https://t.me/Leo77732" target="_blank">
+<img src="image/telegram.svg" alt="Telegram">
+</a>
 
-        <div id="ctaParticles"></div>
-    </section>
+<div class="discord-copy" onclick="copyDiscord()">
+<img src="image/discord.svg" alt="Discord">
+</div>
 
-    <!-- SERVICES -->
-    <section id="services" class="services">
-        <h2>სერვისები</h2>
+</div>
 
-        <div class="service-boxes">
+</header>
 
-            <div class="box">
-                <img class="service-icon" src="image/icons/web.svg" alt="web development">
-                <h3>ვებსაიტების შექმნა</h3>
-                <p>თანამედროვე, სწრაფი და ყველა მოწყობილობაზე ოპტიმიზებული ვებგვერდები.</p>
-            </div>
 
-            <div class="box">
-                <img class="service-icon" src="image/icons/landing.svg" alt="landing page">
-                <h3>ლენდინგ გვერდები</h3>
-                <p>მაღალი კონვერტაციის ლენდინგები ბიზნესისთვის.</p>
-            </div>
+<section id="home" class="hero">
 
-            <div class="box">
-                <img class="service-icon" src="image/icons/shop.svg" alt="online shop">
-                <h3>ონლაინ მაღაზიები</h3>
-                <p>სრულად ფუნქციური ინტერნეტ-მაღაზიები გადახდის სისტემებით.</p>
-            </div>
+<div class="hero-text">
 
-            <div class="box">
-                <img class="service-icon" src="image/icons/seo.svg" alt="seo">
-                <h3>SEO ოპტიმიზაცია</h3>
-                <p>ტექნიკური SEO, სწრაფი ჩატვირთვა და Google პოზიციების გაუმჯობესება.</p>
-            </div>
+<h1>Professional Web Developer</h1>
 
-        </div>
-    </section>
+<p>I build modern, fast and business-focused websites.</p>
 
-    <!-- WHY ME -->
-    <section class="why-me">
-        <h2>რატომ მე?</h2>
+<div class="buttons">
+<a href="#contact" class="btn-primary">Hire Me</a>
+<a href="#services" class="btn-secondary">My Services</a>
+</div>
 
-        <div class="why-boxes">
+</div>
 
-            <div class="why-item">
-                <div class="why-icon">⚡</div>
-                <h3>სწრაფი და ხარისხიანი მუშაობა</h3>
-                <p>ვქმნი თანამედროვე და ოპტიმიზებულ ვებსაიტებს.</p>
-            </div>
-
-            <div class="why-item">
-                <div class="why-icon">🎨</div>
-                <h3>უნიკალური დიზაინი</h3>
-                <p>ყველაფერი შენზე მორგებულია — არა შაბლონები.</p>
-            </div>
-
-            <div class="why-item">
-                <div class="why-icon">📱</div>
-                <h3>მობილური ადაპტაცია</h3>
-                <p>საიტი იდეალურად მუშაობს ყველა მოწყობილობაზე.</p>
-            </div>
-
-            <div class="why-item">
-                <div class="why-icon">🔒</div>
-                <h3>უსაფრთხო & სუფთა კოდი</h3>
-                <p>სტაბილურობა და მაღალი ხარისხის კოდი გარანტირებულია.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>I am a professional web developer who builds clean, modern, responsive and high-performance websites.</p>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-
-<form id="contactForm" action="">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Email Address" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send</button>
-</form>
-
+<div class="hero-img">
+<img src="image/profile.png" alt="profile photo">
+</div>
 
 </section>
 
-    <footer>
-        © 2025 LW Developer — All rights reserved.
-    </footer>
 
-    <!-- TOAST STYLE -->
-    <style>
-        .toast {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background: rgba(40,40,40,0.95);
-            padding: 14px 22px;
-            border-radius: 12px;
-            color: #fff;
-            font-size: 16px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: 0.35s ease;
-            box-shadow: 0 0 20px rgba(0,0,0,0.4);
-            z-index: 999999;
-        }
-        .toast.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
-    
+<section class="cta-section">
 
-    <!-- Tawk.to Chat -->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/691ae7f686b8741960b88643/1ja8hk706';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
+<div class="cta-inner">
+<h2>გინდა თანამედროვე და ეფექტური ვებსაიტი?</h2>
+<p>დავიწყოთ შენი პროექტის შექმნა — მე დაგეხმარები საუკეთესო შედეგის მიღებაში.</p>
+<a href="#contact" class="cta-btn">დამიკავშირდი</a>
+</div>
 
-    <!-- SCRIPTS -->
-    <script src="script.js"></script>
-    
+<div id="ctaParticles"></div>
+
+</section>
+
+
+<section id="services" class="services">
+
+<h2>სერვისები</h2>
+
+<div class="service-boxes">
+
+<div class="box">
+<img class="service-icon" src="image/icons/web.svg">
+<h3>ვებსაიტების შექმნა</h3>
+<p>თანამედროვე, სწრაფი და ყველა მოწყობილობაზე ოპტიმიზებული ვებგვერდები.</p>
+</div>
+
+<div class="box">
+<img class="service-icon" src="image/icons/landing.svg">
+<h3>ლენდინგ გვერდები</h3>
+<p>მაღალი კონვერტაციის ლენდინგები ბიზნესისთვის.</p>
+</div>
+
+<div class="box">
+<img class="service-icon" src="image/icons/shop.svg">
+<h3>ონლაინ მაღაზიები</h3>
+<p>სრულად ფუნქციური ინტერნეტ-მაღაზიები გადახდის სისტემებით.</p>
+</div>
+
+<div class="box">
+<img class="service-icon" src="image/icons/seo.svg">
+<h3>SEO ოპტიმიზაცია</h3>
+<p>ტექნიკური SEO, სწრაფი ჩატვირთვა და Google პოზიციების გაუმჯობესება.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="why-me">
+
+<h2>რატომ მე?</h2>
+
+<div class="why-boxes">
+
+<div class="why-item">
+<div class="why-icon">⚡</div>
+<h3>სწრაფი და ხარისხიანი მუშაობა</h3>
+<p>ვქმნი თანამედროვე და ოპტიმიზებულ ვებსაიტებს.</p>
+</div>
+
+<div class="why-item">
+<div class="why-icon">🎨</div>
+<h3>უნიკალური დიზაინი</h3>
+<p>ყველაფერი შენზე მორგებულია — არა შაბლონები.</p>
+</div>
+
+<div class="why-item">
+<div class="why-icon">📱</div>
+<h3>მობილური ადაპტაცია</h3>
+<p>საიტი იდეალურად მუშაობს ყველა მოწყობილობაზე.</p>
+</div>
+
+<div class="why-item">
+<div class="why-icon">🔒</div>
+<h3>უსაფრთხო & სუფთა კოდი</h3>
+<p>სტაბილურობა და მაღალი ხარისხის კოდი გარანტირებულია.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="about" class="about">
+
+<h2>About Me</h2>
+
+<p>I am a professional web developer who builds clean, modern, responsive and high-performance websites.</p>
+
+</section>
+
+
+<section id="contact" class="contact">
+
+<h2>Contact Me</h2>
+
+<form id="contactForm">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<textarea name="message" placeholder="Your Message" required></textarea>
+
+<button type="submit">Send</button>
+
+</form>
+
+</section>
+
+
+<footer>
+© 2025 LW Developer — All rights reserved.
+</footer>
+
+</div>
+
+
+<script>
+
+function openSite(){
+document.getElementById("startScreen").style.display="none";
+document.getElementById("mainSite").style.display="block";
+}
+
+particlesJS("particles-js",{
+particles:{
+number:{value:80},
+color:{value:"#ffffff"},
+shape:{type:"circle"},
+opacity:{value:0.5},
+size:{value:3},
+line_linked:{
+enable:true,
+distance:150,
+color:"#ffffff",
+opacity:0.4,
+width:1
+},
+move:{
+enable:true,
+speed:2
+}
+}
+});
+
+</script>
+
+<script src="script.js"></script>
+
 </body>
-</html>
-
-
-
-
-
-
-
 
