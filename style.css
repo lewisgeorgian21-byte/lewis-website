@@ -570,7 +570,7 @@ color:white;
 .contact-email {
     text-align: center;     /* ცენტრში გასწორება */
     color: #ffffff;         /* თეთრი ფერი */
-    font-size: 24px;        /* ზომა */
+    font-size: 20px;        /* ზომა */
     margin-top: 12px;       /* Send ღილაკიდან დაშორება */
     width: 100%;            /* სრულ სიგანეზე გაშლა, რომ ცენტრიზაცია ზუსტი იყოს */
 }
