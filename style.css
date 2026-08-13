@@ -567,12 +567,20 @@ color:white;
 }
 
 
+
 .contact-email {
-    text-align: center;     /* ცენტრში გასწორება */
-    color: #ffffff;         /* თეთრი ფერი */
-    font-size: 20px;        /* ზომა */
-    margin-top: 12px;       /* Send ღილაკიდან დაშორება */
-    width: 100%;            /* სრულ სიგანეზე გაშლა, რომ ცენტრიზაცია ზუსტი იყოს */
+    text-align: center;
+    color: #ffffff;      /* თეთრი ფერი */
+    font-size: 20px;
+    margin-top: 12px;
+    width: 100%;
+    text-decoration: none; /* ხაზის მოშორება */
+}
+
+/* იმ შემთხვევაშიც, თუ ლინკია და მაინც ლურჯდება: */
+.contact-email a {
+    color: #ffffff;
+    text-decoration: none;
 }
 
 
